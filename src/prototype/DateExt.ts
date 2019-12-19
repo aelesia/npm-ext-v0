@@ -2,7 +2,7 @@ import {DateUtil} from '../util/DateUtil'
 import {AnyDate} from '../ExtType'
 import dayjs from "dayjs";
 
-export default function DateExt(): void {
+export function DateExt(): void {
 	Date.prototype.utc = function (): number {
 		return DateUtil.utc(this)
 	}

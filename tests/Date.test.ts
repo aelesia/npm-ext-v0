@@ -1,6 +1,5 @@
 import {DateUtil} from '../src/util/DateUtil'
-
-import DateExt from '../src/prototype/DateExt'
+import {DateExt} from '../src/prototype/DateExt'
 
 DateExt()
 

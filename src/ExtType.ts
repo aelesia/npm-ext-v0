@@ -10,7 +10,7 @@ declare global {
 		is_before(date: AnyDate): boolean
 		is_after(date: AnyDate): boolean
 		has_passed(date: AnyDate): boolean
-		_f(date: AnyDate): string
+		_f(date: string): string
 	}
 
 	interface String {

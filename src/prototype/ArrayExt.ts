@@ -1,6 +1,6 @@
-import ArrayUtil from '../util/ArrayUtil'
+import {ArrayUtil} from '../util/ArrayUtil'
 
-export default function ArrayExt():void {
+export function ArrayExt():void {
 
 	Array.prototype.max = function (): number {
 		return ArrayUtil.max(this)

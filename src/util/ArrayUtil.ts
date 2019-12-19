@@ -1,6 +1,4 @@
-import {truncate} from "fs";
-
-export default class ArrayUtil {
+export class ArrayUtil {
 
 	static max(arr: number[]): number {
 		return Math.max.apply(Math, arr)

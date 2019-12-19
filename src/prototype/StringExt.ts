@@ -1,6 +1,6 @@
 import {StringUtil} from '../util/StringUtil'
 
-export default function StringExt(): void {
+export function StringExt(): void {
 	String.prototype.is_blank = function (): boolean {
 		return StringUtil.is_blank(this.toString())
 	}
