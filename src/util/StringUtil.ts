@@ -9,14 +9,6 @@ export class StringUtil {
 		return (!str || !str.trim())
 	}
 
-	/** @deprecated Use _i instead **/
-	static to_number(str: string): number {
-		if (!StringUtil.is_number(str)) {
-			throw new TypeError(`StringUtil: Unable to parse '${str}' to number`)
-		}
-		return Number(str)
-	}
-
 	static lines(str: string): string[] {
 		return str.split('\n')
 	}
@@ -39,8 +31,8 @@ export class StringUtil {
 		return Number(str)
 	}
 
-	static _json <T>(): T {
-		return JSON.parse(this.toString())
+	static _json <T>(str: string): T {
+		return JSON.parse(str)
 	}
 
 	static secs(str: string): number {
@@ -48,14 +40,14 @@ export class StringUtil {
 	}
 
 	static mins(str: string): number {
-		return this._i(str) * 1000*60
+		return this._i(str) * 60000
 	}
 
 	static hours(str: string): number {
-		return this._i(str) * 1000*60*60
+		return this._i(str) * 3600000
 	}
 
 	static days(str: string): number {
-		return this._i(str) * 1000*60*60*24
+		return this._i(str) * 86400000
 	}
 }

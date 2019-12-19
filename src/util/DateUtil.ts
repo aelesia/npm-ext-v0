@@ -1,7 +1,8 @@
 import {StringUtil} from './StringUtil'
 import {AnyDate} from '../ExtType'
+import dayjs from 'dayjs'
 
-export class Time {
+export class DateUtil {
 
 	static now(): Date {
 		return new Date()
@@ -13,7 +14,7 @@ export class Time {
 		} else if (typeof date === 'number') {
 			return this.from_number(date)
 		} else if (typeof date === 'string') {
-			return this.from_number(StringUtil.to_number(date))
+			return this.from_number(StringUtil._i(date))
 		} else if (typeof date === 'undefined') {
 			return new Date()
 		}
@@ -70,6 +71,14 @@ export class Time {
 		return this.is_before(date, new Date())
 	}
 
-	static ext(): void {
+	static until(date: AnyDate, date2: AnyDate): number {
+		let date_utc = this.to_date(date).getTime()
+		let date2_utc = this.to_date(date2).getTime()
+		return date2_utc - date_utc
+	}
+
+	static _f(date: AnyDate, format: string): string {
+		let new_date = this.to_date(date)
+		return dayjs(date).format(format)
 	}
 }

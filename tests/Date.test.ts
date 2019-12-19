@@ -1,5 +1,8 @@
-import {Time} from '../src/util/Time'
-Time.ext()
+import {DateUtil} from '../src/util/DateUtil'
+
+import DateExt from '../src/prototype/DateExt'
+
+DateExt()
 
 describe('Time', () => {
 
@@ -10,7 +13,7 @@ describe('Time', () => {
 	})
 
 	test('add/elapsed', async () => {
-		let date = Time.now()
+		let date = DateUtil.now()
 		let date2 = date.add(61234)
 		expect(date.elapsed(date2)).not.toEqual(61233)
 		expect(date.elapsed(date2)).not.toEqual(61235)
@@ -19,42 +22,42 @@ describe('Time', () => {
 	})
 	//
 	// test('subtract/elapsed', async () => {
-	// 	let date = Time.now()
-	// 	let date2 = Time.subtract(39280, date)
-	// 	expect(Time.elapsed(date, date2)).not.toEqual(39279)
-	// 	expect(Time.elapsed(date, date2)).not.toEqual(39281)
-	// 	expect(Time.elapsed(date, date2)).toEqual(39280)
-	// 	expect(Time.elapsed(date2, date)).toEqual(39280)
+	// 	let date = DateUtil.now()
+	// 	let date2 = DateUtil.subtract(39280, date)
+	// 	expect(DateUtil.elapsed(date, date2)).not.toEqual(39279)
+	// 	expect(DateUtil.elapsed(date, date2)).not.toEqual(39281)
+	// 	expect(DateUtil.elapsed(date, date2)).toEqual(39280)
+	// 	expect(DateUtil.elapsed(date2, date)).toEqual(39280)
 	// })
 	//
 	// test('before', async () => {
-	// 	let date = Time.now()
-	// 	let date2 = Time.add(1, date)
-	// 	expect(Time.is_before(date, date)).toBeTruthy()
-	// 	expect(Time.is_before(date, date2)).toBeTruthy()
-	// 	expect(Time.is_before(date2, date)).not.toBeTruthy()
+	// 	let date = DateUtil.now()
+	// 	let date2 = DateUtil.add(1, date)
+	// 	expect(DateUtil.is_before(date, date)).toBeTruthy()
+	// 	expect(DateUtil.is_before(date, date2)).toBeTruthy()
+	// 	expect(DateUtil.is_before(date2, date)).not.toBeTruthy()
 	// })
 	//
 	// test ('before now()', async () =>{
-	// 	let date = Time.now()
-	// 	expect(Time.is_before(date, Time.now())).toBeTruthy()
+	// 	let date = DateUtil.now()
+	// 	expect(DateUtil.is_before(date, DateUtil.now())).toBeTruthy()
 	// })
 	//
 	// test('after', async () => {
-	// 	let date = Time.now()
-	// 	let date2 = Time.add(1, date)
-	// 	expect(Time.is_after(date, date2)).not.toBeTruthy()
-	// 	expect(Time.is_after(date2, date)).toBeTruthy()
+	// 	let date = DateUtil.now()
+	// 	let date2 = DateUtil.add(1, date)
+	// 	expect(DateUtil.is_after(date, date2)).not.toBeTruthy()
+	// 	expect(DateUtil.is_after(date2, date)).toBeTruthy()
 	// })
 	//
 	// test ('after now()', async () =>{
-	// 	let date = Time.add(99999)
-	// 	expect(Time.is_after(date, Time.now())).toBeTruthy()
+	// 	let date = DateUtil.add(99999)
+	// 	expect(DateUtil.is_after(date, DateUtil.now())).toBeTruthy()
 	// })
 	//
 	// test ('has passed', async ()=>{
-	// 	expect(Time.has_passed(Time.to_date(1576598796000))).toBeTruthy()
-	// 	expect(Time.has_passed(Time.to_date(1576598796))).toBeTruthy()
-	// 	expect(Time.has_passed(Time.to_date(9976598796))).not.toBeTruthy()
+	// 	expect(DateUtil.has_passed(DateUtil.to_date(1576598796000))).toBeTruthy()
+	// 	expect(DateUtil.has_passed(DateUtil.to_date(1576598796))).toBeTruthy()
+	// 	expect(DateUtil.has_passed(DateUtil.to_date(9976598796))).not.toBeTruthy()
 	// })
 })
