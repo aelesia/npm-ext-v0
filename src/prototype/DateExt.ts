@@ -1,5 +1,6 @@
 import {DateUtil} from '@aelesia/commons'
-import {AnyDate} from '../ExtType'
+
+type AnyDate = Date | number | string
 
 export function DateExt(): void {
 	Date.prototype.utc = function (): number {
