@@ -1,7 +1,7 @@
 {
   "name": "@aelesia/ext",
   "version": "0.0.1",
-  "description": "Extension utilities & methods",
+  "description": "Extension version of @aelesia/commons",
   "author": "aelesia",
   "license": "MIT",
   "repository": "https://github.com/aelesia/npm-ext",
