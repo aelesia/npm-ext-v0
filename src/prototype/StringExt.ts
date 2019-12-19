@@ -1,4 +1,4 @@
-import {StringUtil} from '../util/StringUtil'
+import {StringUtil} from '@aelesia/commons'
 
 export function StringExt(): void {
 	String.prototype.is_blank = function (): boolean {

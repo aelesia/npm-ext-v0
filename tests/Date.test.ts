@@ -1,4 +1,3 @@
-import {DateUtil} from '../src/util/DateUtil'
 import {DateExt} from '../src/prototype/DateExt'
 
 DateExt()
@@ -12,7 +11,7 @@ describe('Time', () => {
 	})
 
 	test('add/elapsed', async () => {
-		let date = DateUtil.now()
+		let date = new Date()
 		let date2 = date.add(61234)
 		expect(date.elapsed(date2)).not.toEqual(61233)
 		expect(date.elapsed(date2)).not.toEqual(61235)

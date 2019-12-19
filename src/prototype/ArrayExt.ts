@@ -1,4 +1,4 @@
-import {ArrayUtil} from '../util/ArrayUtil'
+import {ArrayUtil} from '@aelesia/commons'
 
 export function ArrayExt():void {
 

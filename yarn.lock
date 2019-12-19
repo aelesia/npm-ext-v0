@@ -2,6 +2,13 @@
 # yarn lockfile v1
 
 
+"@aelesia/commons@^0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@aelesia/commons/-/commons-0.0.1.tgz#b51cda3240328395506fb296bdcfbe0408ea082f"
+  integrity sha512-NXkfhdNi4qFATeUmXYGefVgJAJQkj1k1rVtmUPZgG7sIicbWz5STr/1paSzdjacM/DmA67jijyBMj7GE439I1Q==
+  dependencies:
+    dayjs "^1.8.18"
+
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.5.5":
   version "7.5.5"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.5.5.tgz#bc0782f6d69f7b7d49531219699b988f669a8f9d"

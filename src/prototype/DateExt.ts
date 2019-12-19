@@ -1,6 +1,5 @@
-import {DateUtil} from '../util/DateUtil'
+import {DateUtil} from '@aelesia/commons'
 import {AnyDate} from '../ExtType'
-import dayjs from "dayjs";
 
 export function DateExt(): void {
 	Date.prototype.utc = function (): number {
